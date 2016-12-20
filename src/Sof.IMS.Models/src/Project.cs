@@ -9,7 +9,7 @@ namespace Sof.IMS.Models
 	/// Project Model
 	/// </summary>
 	[JsonObject(MemberSerialization.OptOut)]
-	public class Project : Entity<int>
+	public class Project : AuditableEntity<int>
 	{
 		/// <summary>
 		/// Constructor

@@ -8,7 +8,7 @@ namespace Sof.IMS.Models
 	/// User Model
 	/// </summary>
 	[JsonObject(MemberSerialization.OptOut)]
-	public class User : Entity<int>
+	public class User : AuditableEntity<int>
 	{
 		/// <summary>
 		/// Constructor
