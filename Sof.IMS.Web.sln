@@ -11,10 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sof.IMS.Web", "src\Sof.IMS.Web\Sof.IMS.Web.xproj", "{34D2B1FC-651B-48BA-A759-265A15EAECEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0DDE5895-28D2-4B85-A83A-F468E187C363} = {0DDE5895-28D2-4B85-A83A-F468E187C363}
+	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sof.IMS.Models", "src\Sof.IMS.Models\Sof.IMS.Models.xproj", "{EA2C16BD-771D-4EB1-B685-4E313D5CF1B5}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sof.IMS.Models.Infrastructure", "src\Sof.IMS.Models.Infrastructure\Sof.IMS.Models.Infrastructure.xproj", "{A5B2F34C-462C-406E-8CFE-3ADC3E39EE80}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F082027-E4C3-48D7-940F-5AF7A252222A} = {4F082027-E4C3-48D7-940F-5AF7A252222A}
+	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sof.IMS.Dal.Context", "src\Sof.IMS.Dal.Context\Sof.IMS.Dal.Context.xproj", "{0DDE5895-28D2-4B85-A83A-F468E187C363}"
 EndProject
