@@ -8,7 +8,7 @@ namespace Sof.IMS.Models
 	/// DailyTask Model
 	/// </summary>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class DailyTask : Entity<int>
+	public class DailyTask : Entity
 	{
 		/// <summary>
 		/// Constructor

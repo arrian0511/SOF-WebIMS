@@ -9,7 +9,7 @@ namespace Sof.IMS.Models
 	/// Project Model
 	/// </summary>
 	[JsonObject(MemberSerialization.OptOut)]
-	public class Project : AuditableEntity<int>
+	public class Project : AuditableEntity
 	{
 		/// <summary>
 		/// Constructor
@@ -30,7 +30,7 @@ namespace Sof.IMS.Models
 
 		public	DateTime				StartDate	{ get; set; }
 		public	DateTime				EndDate		{ get; set; }
-		public	ProjecType				Type		{ get; set; }
+		public	ProjectType				Type		{ get; set; }
 		public	ICollection<Process>	Process		{ get; set; }
 		public	ICollection<User>		Users		{ get; set; }
 	}

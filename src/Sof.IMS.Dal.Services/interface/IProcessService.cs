@@ -3,9 +3,9 @@
 namespace Sof.IMS.Dal.Services
 {
 	/// <summary>
-	/// Project Services Interface
+	/// Process Services Interface
 	/// </summary>
-	public interface IProjectService : IBaseService<Project>
+	public interface IProcessService : IBaseService<Process>
 	{
 		//
 		// TODO: For Addition Self Implementation

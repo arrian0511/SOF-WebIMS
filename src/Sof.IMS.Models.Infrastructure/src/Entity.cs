@@ -8,9 +8,8 @@ namespace Sof.IMS.Models.Infrastructure
 	/// <summary>
 	/// Entity Class
 	/// </summary>
-	/// <typeparam name="I">[in] ID Type</typeparam>
-	public class Entity<I> : IEntity<I>
+	public class Entity : IEntity
 	{
-		public virtual I Id { get; set; }
+		public virtual int Id { get; set; }
 	}
 }

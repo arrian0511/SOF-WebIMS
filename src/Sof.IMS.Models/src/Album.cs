@@ -8,7 +8,7 @@ namespace Sof.IMS.Models
 	/// Album Model
 	/// </summary>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class Album : Entity<int>
+	public class Album : Entity
 	{
 		/// <summary>
 		/// Constructor

@@ -11,13 +11,12 @@ namespace Sof.IMS.Dal.Repository
 	/// <summary>
 	/// Entity Service Interface
 	/// </summary>
-	/// <typeparam name="I">[in] ID Type</typeparam>
 	/// <typeparam name="T">[in] Entity Type</typeparam>
-	public interface IEntityRepository<I, T>
-		where T: Entity<I>, new ()
+	public interface IEntityRepository<T>
+		where T: Entity, new ()
 	{
 		Task<EDataAccessStatus>	SaveAsync ();
-		Task<T>					GetByIdAsync (I id);
+		Task<T>					GetByIdAsync (int id);
 		Task<IEnumerable<T>>	GetAllRecAsync ();
 
 		Task<EDataAccessStatus>	CreateAsync (T entity);

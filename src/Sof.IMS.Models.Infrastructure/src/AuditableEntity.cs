@@ -11,7 +11,7 @@ namespace Sof.IMS.Models.Infrastructure
 	/// </summary>
 	/// <typeparam name="I">[in] ID Type</typeparam>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class AuditableEntity<I> : Entity<I>, IAuditableEntity
+	public class AuditableEntity : Entity, IAuditableEntity
 	{
 		[JsonIgnore]
 		public string		CreatedBy		{ get; set; }

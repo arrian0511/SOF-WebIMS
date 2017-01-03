@@ -11,6 +11,7 @@ namespace Sof.IMS.Utility
 	public enum EDataAccessStatus
 	{
 		ERROR		= -1,		///< Error
-		SUCCESS		= 0			///< Success
+		SUCCESS		= 0,		///< Success
+		NODATA		= 1			///< No Data
 	}
 }

@@ -3,9 +3,9 @@
 namespace Sof.IMS.Dal.Services
 {
 	/// <summary>
-	/// Project Services Interface
+	/// Shift Services Interface
 	/// </summary>
-	public interface IProjectService : IBaseService<Project>
+	public interface IShiftService : IBaseService<Shift>
 	{
 		//
 		// TODO: For Addition Self Implementation

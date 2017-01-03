@@ -7,7 +7,7 @@ namespace Sof.IMS.Models
 	/// Image Model
 	/// </summary>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class Image
+	public class Image : Entity
 	{
 		/// <summary>
 		/// Constructor

@@ -3,9 +3,9 @@
 namespace Sof.IMS.Dal.Services
 {
 	/// <summary>
-	/// Project Services Interface
+	/// TimesheetStatus Services Interface
 	/// </summary>
-	public interface IProjectService : IBaseService<Project>
+	public interface ITimesheetStatusService : IBaseService<TimesheetStatus>
 	{
 		//
 		// TODO: For Addition Self Implementation

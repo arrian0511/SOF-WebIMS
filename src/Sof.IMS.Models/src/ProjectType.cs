@@ -7,12 +7,12 @@ namespace Sof.IMS.Models
 	/// WorkStatus Model
 	/// </summary>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class ProjecType : Entity<int>
+	public class ProjectType : Entity
 	{
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		public ProjecType ()
+		public ProjectType ()
 		{
 			/// Initialize Member Variables <BR>
 		}

@@ -13,10 +13,9 @@ namespace Sof.IMS.Dal.Repository
 	/// <summary>
 	/// Entity Service Class
 	/// </summary>
-	/// <typeparam name="I">[in] ID Type</typeparam>
 	/// <typeparam name="T">[in] Entity Type</typeparam>
-	public class EntityRepository<I, T> : IEntityRepository<I, T>
-		where T : Entity<I>, new()
+	public class EntityRepository<T> : IEntityRepository<T>
+		where T : Entity, new()
 	{
 		private		DbContext	_context;		// Context
 		private		DbSet<T>	_table;			// Table
@@ -39,10 +38,10 @@ namespace Sof.IMS.Dal.Repository
 			return	_value;
 		}
 
-		public async Task<T> GetByIdAsync (I id)
+		public async Task<T> GetByIdAsync (int id)
 		{
 			/// Get Record By ID <BR>
-			T	_find = await _table.FirstOrDefaultAsync (x => Expression.Equals (x.Id, id));
+			T	_find = await _table.FirstOrDefaultAsync (x => int.Equals (x.Id, id));
 			return _find;
 		}
 

@@ -3,9 +3,9 @@
 namespace Sof.IMS.Dal.Services
 {
 	/// <summary>
-	/// Project Services Interface
+	/// DailyTask Services Interface
 	/// </summary>
-	public interface IProjectService : IBaseService<Project>
+	public interface IDailyTaskService : IBaseService<DailyTask>
 	{
 		//
 		// TODO: For Addition Self Implementation

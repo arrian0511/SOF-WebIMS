@@ -3,9 +3,9 @@
 namespace Sof.IMS.Dal.Services
 {
 	/// <summary>
-	/// Project Services Interface
+	/// Image Services Interface
 	/// </summary>
-	public interface IProjectService : IBaseService<Project>
+	public interface IImageService : IBaseService<Image>
 	{
 		//
 		// TODO: For Addition Self Implementation

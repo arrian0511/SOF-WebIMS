@@ -9,7 +9,7 @@ namespace Sof.IMS.Models
 	/// Timesheet Model
 	/// </summary>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class Timesheet : Entity<int>
+	public class Timesheet : Entity
 	{
 		/// <summary>
 		/// Constructor

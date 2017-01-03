@@ -7,7 +7,7 @@ namespace Sof.IMS.Models
 	/// WorkStatus Model
 	/// </summary>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class Process : Entity<int>
+	public class Process : Entity
 	{
 		/// <summary>
 		/// Constructor

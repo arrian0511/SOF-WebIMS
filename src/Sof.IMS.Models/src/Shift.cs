@@ -7,7 +7,7 @@ namespace Sof.IMS.Models
 	/// WorkStatus Model
 	/// </summary>
 	[JsonObject (MemberSerialization.OptOut)]
-	public class Shift : Entity<int>
+	public class Shift : Entity
 	{
 		/// <summary>
 		/// Constructor
