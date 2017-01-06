@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Sof.IMS.Dal.Context;
 using Sof.IMS.Dal.Repository;
 using Sof.IMS.Models.Infrastructure;
@@ -84,6 +81,19 @@ namespace Sof.IMS.Dal.Services
 			/// Delete Record <BR>
 			_retStat = await this._Repository.DeleteAsync (entity);
 			return new SImsDataInfo<T> (entity, _retStat);
+		}
+
+		/// <summary>
+		/// Save Asynchronous
+		/// </summary>
+		/// <returns>Save Status</returns>
+		public async Task<EDataAccessStatus> SaveAsync ()
+		{
+			EDataAccessStatus	_retStat	= EDataAccessStatus.SUCCESS;	// Return Status
+
+			/// Delete Record <BR>
+			_retStat = await this._Repository.SaveAsync ();
+			return _retStat;
 		}
 	}
 }

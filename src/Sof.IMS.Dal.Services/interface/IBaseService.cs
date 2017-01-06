@@ -38,5 +38,11 @@ namespace Sof.IMS.Dal.Services
 		/// <param name="entity">[in] Entity Record</param>
 		/// <returns>Structure Value (JSON Object)</returns>
 		Task<SImsDataInfo<T>>				DeleteAsync (T entity);
+
+		/// <summary>
+		/// Save Asynchronous
+		/// </summary>
+		/// <returns>Save Status</returns>
+		Task<EDataAccessStatus>				SaveAsync ();
 	}
 }

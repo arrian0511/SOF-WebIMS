@@ -18,7 +18,7 @@ namespace Sof.IMS.Models
 		{
 			/// Initialize Member Variables <BR>
 			this.Users		= new List<User> ();
-			this.Process	= new List<Process> ();
+			this.Phases		= new List<Phase> ();
 		}
 
 		public	string					Code		{ get; set; }
@@ -31,7 +31,7 @@ namespace Sof.IMS.Models
 		public	DateTime				StartDate	{ get; set; }
 		public	DateTime				EndDate		{ get; set; }
 		public	ProjectType				Type		{ get; set; }
-		public	ICollection<Process>	Process		{ get; set; }
+		public	ICollection<Phase>		Phases		{ get; set; }
 		public	ICollection<User>		Users		{ get; set; }
 	}
 }
