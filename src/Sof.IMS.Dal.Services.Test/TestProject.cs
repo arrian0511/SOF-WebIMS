@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sof.IMS.Dal.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace Sof.IMS.Dal.Services.Test
 		/// </summary>
 		public TestProject ()
 		{
+			//
+			// TODO: Set DB Configuration Here
+			//
 		}
 
 		/// <summary>
@@ -32,7 +36,9 @@ namespace Sof.IMS.Dal.Services.Test
 		[Fact]
 		public void TestCreate ()
 		{
-
+			IProjectService		_service = new ProjectService (TestContextInstance.GetInstance ().IMSContext);
+			_service.CreateAsync (new Models.Project () { Code = "LO15-00047" });
+			//Assert.Equal ("LO15-00047", _service.
 		}
 
 		/// <summary>
