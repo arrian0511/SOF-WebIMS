@@ -1,8 +1,16 @@
-﻿{
+{
 	"version": "1.0.0-*",
 	"testRunner": "xunit",
 	"dependencies": {
 		"xunit": "2.2.0-beta2-build3300",
+		"Sof.IMS.Utility": "1.0.0-*",
+		"Sof.IMS.Models.Infrastructure": "1.0.0-*",
+		"Sof.IMS.Models": "1.0.0-*",
+		"Sof.IMS.Dal.Services": "1.0.0-*",
+		"Sof.IMS.Dal.Repository": "1.0.0-*",
+		"Sof.IMS.Dal.Context": "1.0.0-*",
+		"Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
+		"Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
 		"dotnet-test-xunit": "2.2.0-preview2-build1029"
 	},
 	"frameworks": {

@@ -37,8 +37,13 @@ namespace Sof.IMS.Dal.Services.Test
 		public void TestCreate ()
 		{
 			IProjectService		_service = new ProjectService (TestContextInstance.GetInstance ().IMSContext);
-			_service.CreateAsync (new Models.Project () { Code = "LO15-00047" });
-			//Assert.Equal ("LO15-00047", _service.
+			//_service.CreateAsync (new Models.Project () { Code = "LO15-00047" });
+			var _data =  Task.Run(() => {
+				return _service.GetAllAsync ();
+			});
+			_data.Wait();
+
+			Assert.Equal (0, _data.Result.ObjValue.Count());
 		}
 
 		/// <summary>
