@@ -20,6 +20,7 @@ var srcPaths = {
 		'node_modules/systemjs/dist/**',
 		'node_modules/typescript/**',
 		'node_modules/bootstrap/**',
+		'node_modules/tether/**',
 		'node_modules/jquery/**',
 		'node_modules/moment/**',
 		'node_modules/angular2-fontawesome/**',

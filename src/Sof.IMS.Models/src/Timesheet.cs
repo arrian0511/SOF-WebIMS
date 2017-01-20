@@ -22,14 +22,14 @@ namespace Sof.IMS.Models
 			this.Status		= new TimesheetStatus ();
 		}
 
-		public int						Break		{ get; set; }
-		public int						TotalMH		{ get; set; }
-		public int						OvertimeMH	{ get; set; }
+		public int?						Break		{ get; set; }
+		public int?						TotalMH		{ get; set; }
+		public int?						OvertimeMH	{ get; set; }
 		public bool						HasValue	{ get; set; }
 
-		public DateTime					Date		{ get; set; }
-		public TimeSpan					TimeIn		{ get; set; }
-		public TimeSpan					TimeOut		{ get; set; }
+		public DateTime?				Date		{ get; set; }
+		public TimeSpan?				TimeIn		{ get; set; }
+		public TimeSpan?				TimeOut		{ get; set; }
 		public Shift					Shift		{ get; set; }
 		public TimesheetStatus			Status		{ get; set; }
 		public ICollection<DailyTask>	DailyTasks	{ get; set; }

@@ -20,8 +20,8 @@ namespace Sof.IMS.Models
 			this.Process = new Process ();
 		}
 
-		public int			PlanMH		{ get; set; }
-		public int			ActualMH	{ get; set; }
+		public int?			PlanMH		{ get; set; }
+		public int?			ActualMH	{ get; set; }
 		public string		Remarks		{ get; set; }
 
 		public Project		Project		{ get; set; }

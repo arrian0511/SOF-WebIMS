@@ -24,12 +24,12 @@ namespace Sof.IMS.Models
 		public	string					Code		{ get; set; }
 		public	string					Title		{ get; set; }
 		public	string					Remarks		{ get; set; }
-		public	int						DisplayFlag { get; set; }
-		public	int						EstMH		{ get; set; }
-		public	int						ActMH		{ get; set; }
+		public	int?					DisplayFlag { get; set; }
+		public	int?					EstMH		{ get; set; }
+		public	int?					ActMH		{ get; set; }
 
-		public	DateTime				StartDate	{ get; set; }
-		public	DateTime				EndDate		{ get; set; }
+		public	DateTime?				StartDate	{ get; set; }
+		public	DateTime?				EndDate		{ get; set; }
 		public	ProjectType				Type		{ get; set; }
 		public	ICollection<Phase>		Phases		{ get; set; }
 		public	ICollection<User>		Users		{ get; set; }
