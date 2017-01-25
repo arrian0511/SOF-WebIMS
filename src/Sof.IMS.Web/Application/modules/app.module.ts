@@ -9,9 +9,13 @@ import {AppService} 			from "../services/app.service";
 import {AppComponent} 			from "../components/app.component";
 import {Highlight} 				from "../pipes/highlight.pipe";
 
+/// Components
+import {TopbarComponent} from '../components/main/topbar.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
+		TopbarComponent,
 		Highlight,
 		spinner.CircleComponent
 	],

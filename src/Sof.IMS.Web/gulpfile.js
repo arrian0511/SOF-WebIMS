@@ -3,6 +3,7 @@ var	gulp = require('gulp'),
 	gp_clean = require('gulp-clean'),
 	gp_concat = require('gulp-concat'),
 	gp_less = require('gulp-less'),
+	gp_sass = require('gulp-sass'),
 	gp_sourcemaps = require('gulp-sourcemaps'),
 	gp_typescript = require('gulp-typescript'),
 	gp_uglify = require('gulp-uglify');
@@ -95,11 +96,18 @@ gulp.task('clean:contents', function () {
 // Compile Less contents
 gulp.task('copy:contents', ['clean:contents'], function () {
 	/// Compile Less Files and Move to CSS Folder
-	gulp.src(srcPaths.contents + '/less/main.less')
+	// gulp.src(srcPaths.contents + '/less/main.less')
+	// 	.pipe(gp_sourcemaps.init())
+	// 	.pipe(gp_less())
+	// 	.pipe(gp_sourcemaps.write('.'))
+	// 	.pipe(gulp.dest(desPaths.contents));
+
+	/// Compile Sass Files and Move to CSS Folder
+	gulp.src(srcPaths.contents + '/sass/main.scss')
 		.pipe(gp_sourcemaps.init())
-		.pipe(gp_less())
+		.pipe(gp_sass().on('error', gp_sass.logError))
 		.pipe(gp_sourcemaps.write('.'))
-		.pipe(gulp.dest(desPaths.contents))
+		.pipe(gulp.dest(desPaths.contents));
 
 	/// Copy CSS Directly
 	gulp.src(srcPaths.contents + '/css/**')
