@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy, HostListener}		from "@angular/core";
+import {Component, OnInit, OnDestroy, HostListener, ElementRef, Renderer, ViewChild, AfterViewInit}		from "@angular/core";
 
 @Component({
 	selector: 'topbar',
@@ -9,25 +9,47 @@ import {Component, OnInit, OnDestroy, HostListener}		from "@angular/core";
 	}
 })
 
-export class TopbarComponent implements OnInit, OnDestroy
+export class TopbarComponent implements OnInit, OnDestroy, AfterViewInit
 {
 	private 		mKey:			string;
 	private 		mIsCollapse: 	boolean;
 
+	private			mRenderer:		Renderer;
+
+	@ViewChild("topmenu")
+	private 	_topbarMenu: ElementRef;
+
 	/// Constructor
-	constructor ()
+	constructor (_renderer: Renderer)
 	{
 		/// Initialize Member Variables
-		this.mIsCollapse = false;
+		this.mIsCollapse = true;
+		this.mRenderer = _renderer;
 	}
 
-	OnResizeWindow (_resize: UIEvent) {
-		var sample = _resize.view.innerHeight;
+	ngAfterViewInit ()
+	{
+		//this.mRenderer.setElementClass (this.topbarElement.nativeElement, "topbar-user", false);
+		//this.mRenderer.setElementClass (this.aboutElement.nativeElement, "active", true);
+	}
+
+	OnResizeWindow (_resize: Event) {
 	}
 
 	onDocumentKeyUp(ev: KeyboardEvent) {
 		this.mKey = ev.key;
 		var height = document.body.scrollHeight;
+	}
+
+	private OnClickToggle ()
+	{
+		this.mIsCollapse = !this.mIsCollapse;
+		if (this.mIsCollapse == true) {
+			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "toggle", false);
+		}
+		else {
+			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "toggle", true);
+		}
 	}
 
 	/// On Initialize
