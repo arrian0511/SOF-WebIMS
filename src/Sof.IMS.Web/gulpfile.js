@@ -2,7 +2,6 @@
 var	gulp = require('gulp'),
 	gp_clean = require('gulp-clean'),
 	gp_concat = require('gulp-concat'),
-	gp_less = require('gulp-less'),
 	gp_sass = require('gulp-sass'),
 	gp_sourcemaps = require('gulp-sourcemaps'),
 	gp_typescript = require('gulp-typescript'),
@@ -14,10 +13,10 @@ var srcPaths = {
 	],
 	lib: [
 		'node_modules/@angular/**',
+		'node_modules/angular-in-memory-web-api/**',
 		'node_modules/rxjs/**',
 		'node_modules/core-js/**',
 		'node_modules/zone.js/**',
-		'node_modules/reflect-metadata/**',
 		'node_modules/systemjs/dist/**',
 		'node_modules/typescript/**',
 		'node_modules/bootstrap/**',
@@ -95,19 +94,6 @@ gulp.task('clean:contents', function () {
 
 // Compile Less contents
 gulp.task('copy:contents', ['clean:contents'], function () {
-	/// Compile Less Files and Move to CSS Folder
-	// gulp.src(srcPaths.contents + '/less/main.less')
-	// 	.pipe(gp_sourcemaps.init())
-	// 	.pipe(gp_less())
-	// 	.pipe(gp_sourcemaps.write('.'))
-	// 	.pipe(gulp.dest(desPaths.contents));
-
-	/// Compile Sass Files and Move to CSS Folder
-	gulp.src(srcPaths.contents + '/sass/main.scss')
-		.pipe(gp_sourcemaps.init())
-		.pipe(gp_sass().on('error', gp_sass.logError))
-		.pipe(gp_sourcemaps.write('.'))
-		.pipe(gulp.dest(desPaths.contents));
 
 	/// Copy CSS Directly
 	gulp.src(srcPaths.contents + '/css/**')
@@ -118,8 +104,16 @@ gulp.task('copy:contents', ['clean:contents'], function () {
 		.pipe(gulp.dest(desPaths.contents));
 
 	/// Copy JS Directly
-	return gulp.src(srcPaths.contents + '/js/**')
-				.pipe(gulp.dest(desPaths.contents));
+	gulp.src(srcPaths.contents + '/js/**')
+		.pipe(gulp.dest(desPaths.contents));
+				
+	/// Compile Sass Files and Move to CSS Folder
+	return gulp.src(srcPaths.contents + '/sass/main.scss')
+			.pipe(gp_sourcemaps.init())
+			.pipe(gp_sass().on('error', gp_sass.logError))
+			.pipe(gp_concat('css/main.css'))
+			.pipe(gp_sourcemaps.write('.'))
+			.pipe(gulp.dest(desPaths.contents));
 });
 
 // Default
