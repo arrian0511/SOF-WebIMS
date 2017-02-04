@@ -16,7 +16,7 @@ export class TopbarComponent implements OnInit, OnDestroy, AfterViewInit
 
 	private			mRenderer:		Renderer;
 
-	@ViewChild("topmenu")
+	@ViewChild("topMenu")
 	private 	_topbarMenu: ElementRef;
 
 	/// Constructor
@@ -45,10 +45,13 @@ export class TopbarComponent implements OnInit, OnDestroy, AfterViewInit
 	{
 		this.mIsCollapse = !this.mIsCollapse;
 		if (this.mIsCollapse == true) {
-			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "toggle", false);
+			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "topbar-menu-show", false);
+			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "collapse", true);
 		}
 		else {
-			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "toggle", true);
+			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "collapse", false);
+			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "topbar-menu-show", true);
+			this.mRenderer.setElementClass (this._topbarMenu.nativeElement, "collapsing", true);
 		}
 	}
 

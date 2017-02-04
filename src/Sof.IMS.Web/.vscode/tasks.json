@@ -8,8 +8,18 @@
         "--no-color"
     ],
     "tasks": [
-        {
+		{
             "taskName": "compile:all",
+            "args": [],
+            "isBuildCommand": true,
+            "isWatching": false,
+            "problemMatcher": [
+                "$tsc",
+                "$jshint"
+            ]
+		},
+        {
+            "taskName": "copydisplay",
             "args": [],
             "isBuildCommand": true,
             "isWatching": false,
